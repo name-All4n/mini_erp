@@ -22,7 +22,7 @@ public class Product {
     @Column(precision = 19, scale = 2)
     private BigDecimal price;
     @Column(name = "quantity_in_stock")
-    private int quantityInStock;
+    private Integer quantityInStock;
     private boolean active;
 
     public Product(DataProductRegister data) {
@@ -31,5 +31,24 @@ public class Product {
         this.description = data.description();
         this.price = data.price();
         this.quantityInStock = data.quantityInStock();
+    }
+
+    public void updateInformations(DataProductUpdate data) {
+        if  (data.name() != null) {
+            this.name = data.name();
+        }
+        if (data.description() != null) {
+            this.description = data.description();
+        }
+        if (data.price() != null) {
+            this.price = data.price();
+        }
+        if (data.quantityInStock() != null) {
+            this.quantityInStock = data.quantityInStock();
+        }
+    }
+
+    public void delete() {
+        this.active = false;
     }
 }
