@@ -1,7 +1,6 @@
-package com.my_project.mini_ERP.model;
+package com.my_project.mini_ERP.model.product;
 
 import jakarta.persistence.*;
-import jakarta.validation.Valid;
 import lombok.*;
 
 import java.math.BigDecimal;

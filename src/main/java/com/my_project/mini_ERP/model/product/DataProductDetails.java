@@ -1,4 +1,4 @@
-package com.my_project.mini_ERP.model;
+package com.my_project.mini_ERP.model.product;
 
 import java.math.BigDecimal;
 

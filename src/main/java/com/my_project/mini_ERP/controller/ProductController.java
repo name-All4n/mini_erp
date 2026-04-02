@@ -1,6 +1,6 @@
 package com.my_project.mini_ERP.controller;
 
-import com.my_project.mini_ERP.model.*;
+import com.my_project.mini_ERP.model.product.*;
 import com.my_project.mini_ERP.repository.ProductRepository;
 import jakarta.transaction.Transactional;
 import jakarta.validation.Valid;
@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.util.UriComponentsBuilder;
 
 @RestController
-@RequestMapping("Product")
+@RequestMapping("product")
 public class ProductController {
     @Autowired
     private ProductRepository productRepository;
