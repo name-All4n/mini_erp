@@ -1,8 +1,8 @@
 package com.my_project.mini_ERP.model.user;
 
 public enum UserRole {
-    ADMIN("ADMIN"),
-    USER("USER");
+    ADMIN("ROLE_ADMIN"),
+    VENDORS("ROLE_VENDORS");
 
     private String role;
     UserRole(String role) {
