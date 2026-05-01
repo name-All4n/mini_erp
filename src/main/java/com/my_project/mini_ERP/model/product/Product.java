@@ -50,4 +50,14 @@ public class Product {
     public void delete() {
         this.active = false;
     }
+
+    public void reduceStock(Integer quantity) {
+        if (quantity > this.quantityInStock){
+            throw new RuntimeException(
+                    "Estoque insuficiente para o produto: " + this.name +
+                            ". Disponivel: " +this.quantityInStock
+            );
+        }
+        this.quantityInStock -= quantity;
+    }
 }

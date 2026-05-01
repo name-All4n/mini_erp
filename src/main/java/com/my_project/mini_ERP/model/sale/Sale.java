@@ -9,6 +9,7 @@ import lombok.Setter;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.List;
 
 @Entity
@@ -21,13 +22,13 @@ public class Sale {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private LocalDate saleDate;
+    private LocalDateTime saleDate;
     @Column(precision = 19, scale = 2)
     private BigDecimal totalValue;
     @OneToMany(mappedBy = "sale", cascade = CascadeType.ALL)
     private List<SaleItem> items;
 
-    public Sale(LocalDate saleDate, BigDecimal totalValue, List<SaleItem> items) {
+    public Sale(LocalDateTime saleDate, BigDecimal totalValue, List<SaleItem> items) {
         this.saleDate = saleDate;
         this.totalValue = totalValue;
         this.items = items;
